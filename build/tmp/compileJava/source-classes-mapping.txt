@@ -1,12 +1,12 @@
-com/musinsa/searchdemo/SearchdemoApplication.java
- com.musinsa.searchdemo.SearchdemoApplication
-com/musinsa/searchdemo/bean/ElasticsearchBeanService.java
- com.musinsa.searchdemo.bean.ElasticsearchBeanService
-com/musinsa/searchdemo/service/ElasticSearchService.java
- com.musinsa.searchdemo.service.ElasticSearchService
-com/musinsa/searchdemo/handler/IHandler.java
- com.musinsa.searchdemo.handler.IHandler
 com/musinsa/searchdemo/handler/api/SuggestedWordHandler.java
  com.musinsa.searchdemo.handler.api.SuggestedWordHandler
+com/musinsa/searchdemo/SearchdemoApplication.java
+ com.musinsa.searchdemo.SearchdemoApplication
+com/musinsa/searchdemo/handler/IHandler.java
+ com.musinsa.searchdemo.handler.IHandler
+com/musinsa/searchdemo/bean/ElasticsearchBeanService.java
+ com.musinsa.searchdemo.bean.ElasticsearchBeanService
 com/musinsa/searchdemo/controller/SearchController.java
  com.musinsa.searchdemo.controller.SearchController
+com/musinsa/searchdemo/service/ElasticSearchService.java
+ com.musinsa.searchdemo.service.ElasticSearchService

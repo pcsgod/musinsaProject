@@ -10,6 +10,7 @@ import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.elasticsearch.search.sort.SortOrder;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,7 +44,8 @@ public class ElasticSearchService extends RestHighLevelClient {
                         .searchType(SearchType.DFS_QUERY_THEN_FETCH)
                         .source(new SearchSourceBuilder()
                                 .size(100)
-                                .query(query))
+                                .query(query)
+                        .sort("wordLength", SortOrder.ASC))
                 , RequestOptions.DEFAULT);
         for(SearchHit hit : res.getHits().getHits()){
             String word = (String)hit.getSourceAsMap().get("word");

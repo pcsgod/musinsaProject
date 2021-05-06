@@ -1,0 +1,42 @@
+curl -X PUT http://localhost:9200/auto_word
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1,
+      "analysis": {
+        "analyzer": {
+          "ngram_analyzer": {
+            "tokenizer": "ngram_analyzer"
+          }
+        },
+        "tokenizer": {
+          "ngram_analyzer": {
+            "type": "ngram",
+            "min_gram": "1",
+            "max_gram": "2"
+          }
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "word": {
+        "type": "text",
+        "analyzer":"ngram_analyzer",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          },
+          "txt": {
+            "type": "text"
+          }
+        }
+      },
+      "wordLength": {
+         "type": "long"
+      }
+    }
+  }
+}
