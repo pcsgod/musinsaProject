@@ -1,0 +1,2 @@
+com/musinsa/searchdemo/SearchdemoApplicationTests.java
+ com.musinsa.searchdemo.SearchdemoApplicationTests
